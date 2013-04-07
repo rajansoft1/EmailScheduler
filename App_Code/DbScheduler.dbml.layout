@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.75, 14.25" name="DbScheduler">
+  <DataContextMoniker Name="/DbSchedulerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="aae3b688-9594-4cbe-b1b3-21fb18c88d76" absoluteBounds="5, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DbSchedulerDataContext/ContactGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f9eb530-c46f-4206-8a8b-c420806d9865" absoluteBounds="5.0150000000000006, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f743706-24f2-4900-b900-f94b306bd632" absoluteBounds="3, 3.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DbSchedulerDataContext/ContactGroupSheetMaping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b923fb85-4967-417f-b201-d01e96797e15" absoluteBounds="3.015, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e96cf5d6-90e5-4e09-a30e-27d72f223a8c" absoluteBounds="7.375, 0.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DbSchedulerDataContext/EmailSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51127b6c-638c-47ab-b827-1c3eb29cae84" absoluteBounds="7.39, 1.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbf3e25e-052e-401e-b250-31bf73ad3888" absoluteBounds="0.75, 6.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DbSchedulerDataContext/EmailTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb3c306d-fe1e-4428-8fc7-c233794b8c60" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82c09dde-fe64-4a16-88d1-f06353b49142" absoluteBounds="7.625, 3.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DbSchedulerDataContext/Owner" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3724469c-2265-4312-bf7f-fb177f56d6a9" absoluteBounds="7.64, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97143fbf-fbb5-4735-99f6-c524caa15a82" absoluteBounds="6.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DbSchedulerDataContext/RecursiveSheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50b3dd91-a641-4ab1-a622-06f10463297f" absoluteBounds="6.765, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0962c6b9-f87f-40cc-90f4-e0f884263c5c" absoluteBounds="9.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DbSchedulerDataContext/RecursiveSmsTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24e6574f-e9f5-4500-967a-e0a809b2107c" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32435c52-6ec8-4142-8580-5ca852779fec" absoluteBounds="9.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DbSchedulerDataContext/Sheet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56b0f14a-5099-4510-a43b-0c2eb04cf4ab" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d8a251a-3c8f-4c55-943e-7774bf5f25b4" absoluteBounds="9.75, 6.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/DbSchedulerDataContext/SmsConnection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6731ebc-b021-4951-a672-97b3dee3c02d" absoluteBounds="9.765, 7.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="010f294e-dae3-43a2-ab70-817acbba4be2" absoluteBounds="6.75, 10.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DbSchedulerDataContext/SmtpConnection" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b419e0f9-ea87-4f65-8481-13971c5999d0" absoluteBounds="6.765, 11.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22e9436f-ce98-4760-9503-32aca4ae7f85" absoluteBounds="10.5, 10.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DbSchedulerDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae35d659-9f29-438b-bff1-e35bb407f793" absoluteBounds="10.515, 11.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f9a3a1b-ac7b-4af2-9375-58efce3a2689" absoluteBounds="3.75, 10.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DbSchedulerDataContext/SmsTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="895827c6-b424-4586-aa2d-a05d70414fb7" absoluteBounds="3.7649999999999997, 10.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ffb65a0-030c-43ca-9c38-adb33fcfce15" absoluteBounds="1.25, 9.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DbSchedulerDataContext/SmsSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2dffc7b-f43e-4f04-a7ba-11bfa192add1" absoluteBounds="1.2650000000000001, 9.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="645cb272-78a5-4e9c-abf7-674c530f2fbb" absoluteBounds="0.5, 0.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DbSchedulerDataContext/EmailSchedule1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a81b04f9-63ed-4598-bbe4-3c124deea10b" absoluteBounds="0.51500000000000012, 1.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a30722c7-d187-4a0a-81c3-1adb37a07e3c" absoluteBounds="3.875, 6.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DbSchedulerDataContext/RecursiveEmailTemplate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="681d5012-8857-4466-8be7-63d3a5cd0a7b" absoluteBounds="3.89, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1eb35504-14c8-4e08-ae6e-108fa5e142ea" absoluteBounds="0.875, 3.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DbSchedulerDataContext/RecursiveContactGroupSheetMaping" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4af4ce08-18be-4c43-84f0-2f7134e994e2" absoluteBounds="0.89000000000000012, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95b3cca4-8b7f-441d-a3e4-0107d754c3cd" absoluteBounds="2.75, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DbSchedulerDataContext/EmailLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5603c44-8f06-4e87-8409-9271256f1101" absoluteBounds="2.765, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="126f7f6f-fcf3-4366-89f1-fb61ff285ea7" absoluteBounds="5.5, 2.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DbSchedulerDataContext/SmsLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a991aa7-5cbb-4039-a067-ba9d3795de17" absoluteBounds="5.515, 3.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f70e02c6-9f8d-4a8e-a9dc-41e72e764e6f" absoluteBounds="5, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DbSchedulerDataContext/SmsScheduleView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e66734d-c9a4-4d6b-8f22-529fdaafeeaa" absoluteBounds="5.015, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40d6bd94-d0b8-4b3c-9ae9-ae0579cfa89b" absoluteBounds="3.875, 2.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DbSchedulerDataContext/ContactSync" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4630be8c-32c3-4399-804d-57d2818a6cd1" absoluteBounds="3.89, 3.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EmailScheduler" Class="DbSchedulerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=RAJAN-PC\STG001;Initial Catalog=EmailScheduler;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="EmailSchedulerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ContactGroup" Member="ContactGroups">
+    <Type Name="ContactGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactGroupSheetMaping" Member="ContactGroupSheetMapings">
+    <Type Name="ContactGroupSheetMaping">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailSchedule" Member="EmailSchedules">
+    <Type Name="EmailSchedule">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SendingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailTemplate" Member="EmailTemplates">
+    <Type Name="EmailTemplate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EmailText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Owner" Member="Owners">
+    <Type Name="Owner">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecursiveSheet" Member="RecursiveSheets">
+    <Type Name="RecursiveSheet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecursiveSmsTemplate" Member="RecursiveSmsTemplates">
+    <Type Name="RecursiveSmsTemplate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageText" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="RecursiveSheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaysAfter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sheet" Member="Sheets">
+    <Type Name="Sheet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmsConnections" Member="SmsConnections">
+    <Type Name="SmsConnection">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Proirity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmtpConnections" Member="SmtpConnections">
+    <Type Name="SmtpConnection">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Port" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UseSsl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DailyLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contact" Member="Contacts">
+    <Type Name="Contact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContactGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OwnerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmsTemplate" Member="SmsTemplates">
+    <Type Name="SmsTemplate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageText" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SendingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoOfTimes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepeatAfter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmsSchedule" Member="SmsSchedules">
+    <Type Name="SmsSchedule">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SmsTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsRecursive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContactId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SentOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ConnectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MapingId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailSchedule" Member="EmailSchedule1s">
+    <Type Name="EmailSchedule1">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SendingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecursiveEmailTemplate" Member="RecursiveEmailTemplates">
+    <Type Name="RecursiveEmailTemplate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailTemplateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecursiveSheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaysAfter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecursiveContactGroupSheetMaping" Member="RecursiveContactGroupSheetMapings">
+    <Type Name="RecursiveContactGroupSheetMaping">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecursiveSheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailLog" Member="EmailLogs">
+    <Type Name="EmailLog">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SendingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SentOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ConnectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmsLog" Member="SmsLogs">
+    <Type Name="SmsLog">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContactId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SmsText" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsRecursive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SendingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SentOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ConnectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SmsScheduleView" Member="SmsScheduleViews">
+    <Type Name="SmsScheduleView">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SentOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MessageText" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SheetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactSync" Member="ContactSyncs">
+    <Type Name="ContactSync">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SheetUrl" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="LastReadRow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
